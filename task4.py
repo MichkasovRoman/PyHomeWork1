@@ -8,3 +8,12 @@
 # 24 -> 4 16 4
 # 60 -> 10 40 10
 
+numberOfcrane = int(input('Введите количество журавликов: '))
+result = numberOfcrane // 6
+
+if numberOfcrane < 0 or numberOfcrane % 6 :
+    print('Недопустимый формат записи числа.')
+else:
+    print(f'Петя и Сережа сделали {result} журавликов.')
+    print(f'А Катя сделала {4 * result} журавликов.')
+    
