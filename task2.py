@@ -5,15 +5,12 @@
 # 100 -> 1 (1 + 0 + 0)
 
 threeDigitNumber = int(input('Введите трехзначное число: '))
-module = abs(threeDigitNumber)
-hundreds = module // 100       # количество сотен в заданном числе
-tens = module % 100 // 10      # количество десятков в заданном числе
-units = module % 10            # количество единиц в заданном числе
-
+module = abs(threeDigitNumber)   # абсолютная величина числа, чтобы можно было посчитать
+                                 # сумму цифр не только положительных, но отрицательных целых чисел
 if len(str(module)) > 3 :
     print('Некорректный формат записи числа.')
 else:
-    sumOfDigits = hundreds + tens + units
+    sumOfDigits = module // 100 + module % 100 // 10  + module % 10
     print(f'Сумма цифр введенного вами числа: {sumOfDigits}')
 
 
